@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+-->
+
+<?import com.jfoenix.validation.*?>
+<?import com.jfoenix.controls.*?>
+<?import app.fxmltableview.view.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" hgap="10.0" prefHeight="525.0" prefWidth="319.0" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.fxmltableview.controller.FXMLTableViewController">
+  <padding>
+    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+  </padding>
+   <children>
+      <TabPane prefHeight="26.0" prefWidth="372.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+        <tabs>
+          <Tab text="CXRs" />
+          <Tab text="Untitled Tab 2" />
+        </tabs>
+      </TabPane>
+     
+     <TableView fx:id="tableView" prefHeight="209.0" prefWidth="372.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+       <columns>
+         <TableColumn fx:id="idColumn" prefWidth="100.0" text="ID">
+           <cellFactory>
+             <FormattedTableCellFactory alignment="CENTER" />
+           </cellFactory>
+           <cellValueFactory>
+             <PropertyValueFactory property="id" />
+           </cellValueFactory>
+         </TableColumn>
+         <TableColumn fx:id="codeColumn" prefWidth="100.0" text="Code">
+           <cellValueFactory>
+             <PropertyValueFactory property="code" />
+           </cellValueFactory>
+         </TableColumn>
+         <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Name">
+           <cellValueFactory>
+             <PropertyValueFactory property="name" />
+           </cellValueFactory>
+         </TableColumn>
+       </columns>
+       <items>
+         <FXCollections fx:factory="observableArrayList">
+           
+         </FXCollections>
+       </items>
+       <sortOrder>
+         <fx:reference source="idColumn" />
+       </sortOrder>
+     </TableView>
+     
+     <HBox alignment="BOTTOM_RIGHT" prefHeight="47.0" prefWidth="367.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+        <children>
+          <TextField fx:id="codeField" prefWidth="90.0" promptText="Code" />
+          <TextField fx:id="idField" prefWidth="90.0" promptText="ID" />
+          <TextField fx:id="nameField" prefWidth="150.0" promptText="Name" />
+          <Button onAction="#addCarrier" prefHeight="25.0" prefWidth="50.0" text="Add" />
+        </children>
+     </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+           <Label style="-fx-font: NORMAL 20 Tahoma;" text="Carrier List" />
+         </children></HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
+         <children>
+            <Button mnemonicParsing="false" onAction="#editCarrier" text="Edit" />
+            <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#deleteCarrier" prefHeight="25.0" prefWidth="53.0" text="Delete" />
+         </children>
+      </HBox>
+     
+   </children>
+   <columnConstraints>
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="372.0" minWidth="372.0" prefWidth="400.0" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="44.0" minHeight="31.0" prefHeight="44.0" />
+      <RowConstraints maxHeight="44.0" minHeight="31.0" prefHeight="44.0" />
+      <RowConstraints maxHeight="276.0" minHeight="251.0" prefHeight="276.0" />
+      <RowConstraints maxHeight="25.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

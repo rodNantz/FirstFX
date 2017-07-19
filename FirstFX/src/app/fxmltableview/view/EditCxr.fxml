@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.fxmltableview.controller.EditCxr">
+   <children>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="240.0">
+               <children>
+                  <TextField fx:id="idCxr" editable="false" layoutX="12.0" layoutY="14.0" prefHeight="25.0" prefWidth="160.0" promptText="ID" />
+                  <TextField fx:id="codeCxr" layoutX="12.0" layoutY="53.0" prefHeight="25.0" prefWidth="160.0" promptText="Code" />
+                  <TextField fx:id="nameCxr" editable="false" layoutX="12.0" layoutY="90.0" prefHeight="25.0" prefWidth="160.0" promptText="Name" />
+                  <Button layoutX="14.0" layoutY="140.0" mnemonicParsing="false" onAction="#closeEdit" text="Cancel" />
+                  <Button fx:id="confirmBtn" layoutX="120.0" layoutY="140.0" mnemonicParsing="false" text="Confirm" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
